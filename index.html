@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tao va thao tac voi mang</title>
+</head>
+<body>
+    <h2>Sample Screen</h2>
+    <input type="text" id="text"> <br>
+    <input type="button" id="btnAdd" value="Add" onclick="add_element()">
+    <input type="button" id="btnDisplay" value="Display" onclick="display_element()"> <br>
+    <p id="displayScreen"></p>
+    <p id="displayArray"></p>
+    <script>
+        let x = 0;
+        let array = [];
+        function add_element () {
+            array[x] = document.getElementById("text").value;
+            document.getElementById('displayScreen').innerHTML = "element: " + array[x] + ' da them vao chi muc ' + x;
+            x = x+1;
+            document.getElementById("text").value = '';
+            console.log (array)
+        }
+
+        // function display_element() {
+        //     for (let i=0; i<array.length;i++) {
+        //         document.getElementById('displayArray').innerHTML += 'elemen: ' + i + "=" + array[i] + '<br/>'
+        //     }
+        // }
+
+
+
+
+    </script>
+</body>
+</html>
